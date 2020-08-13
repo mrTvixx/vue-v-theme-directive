@@ -1,2 +1,3 @@
 # vue-v-theme-directive
-Created with CodeSandbox
+
+Implemented vue directive to control the color scheme of the site

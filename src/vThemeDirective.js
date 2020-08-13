@@ -34,12 +34,7 @@ export default (store) => (el, { modifiers }) => {
     (isDarkTheme) => {
       const themeType = isDarkTheme ? "dark" : "light";
       const selectedTheme = theme[themeType];
-      const themeStyles = selectedTheme[type];
-      const stylesList = Object.keys(themeStyles);
-
-      for (let i = 0; i < stylesList.length; i++) {
-        el.style[stylesList[i]] = themeStyles[stylesList[i]];
-      }
+      Object.assign(el.style, selectedTheme[type]);
     }
   );
   el.__role_unwatch__ = unwatch;
